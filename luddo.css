@@ -11,6 +11,7 @@ body{
     height:450px;
     width: 450px;
     
+    
 }
 .cell
 {
@@ -80,4 +81,122 @@ body{
 {   height: 180px;
     width: 180px;
     background-color: yellow;
+}
+ 
+.insidered
+{    margin: 15px 15px ;
+
+    background-color: white;
+    height:150px;
+    width: 150px;
+}
+.g
+{  display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+  height:75px;
+  width:150px;
+  background-color: white;
+
+}
+.gg
+{  display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+  height:75px;
+  width:150px;
+  background-color: white;
+}
+.box1
+{
+    height:45px;
+    width:45px;
+    border-radius: 50%;
+    background-color: rgb(250, 248, 248);
+    border: 2px solid black;
+    text-align: center;
+}
+.box2
+{
+    height:45px;
+    width:45px;
+    display: flex;
+    border-radius: 50%;
+    background-color: rgb(247, 243, 243);
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 100%;
+     width: 100%;
+     object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.scell
+{ background-image: url('star.png');
+    background-size: contain;     
+    background-repeat: no-repeat;
+    background-position: center;  
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 90px;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.homet {
+    width: 0;
+    height: 0;
+    border-top: 46px solid green;
+    border-right: 46px solid yellow;
+    border-bottom: 45px solid skyblue;
+    border-left: 45px solid red;
+}
+.rcell
+{ background-image: url('r.png');
+    background-size: contain;     
+    background-repeat: no-repeat;
+    background-position: center;  
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+.ycell
+{ background-image: url('y.png');
+    background-size: contain;     
+    background-repeat: no-repeat;
+    background-position: center;  
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+.gcell
+{ background-image: url('g.png');
+    background-size: contain;     
+    background-repeat: no-repeat;
+    background-position: center;  
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+.bcell
+{ background-image: url('b.png');
+    background-size: contain;     
+    background-repeat: no-repeat;
+    background-position: center;  
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
 }
