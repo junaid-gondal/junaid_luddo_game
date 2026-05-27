@@ -2,7 +2,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: rgb(66, 181, 220);
 }
 .container
@@ -10,8 +9,6 @@ body{
     background-color:rgb(227, 215, 215);
     height:450px;
     width: 450px;
-    
-    
 }
 .cell
 {
@@ -30,13 +27,11 @@ body{
     width: 180px;
     background-color: red;
 }
-
 .cells1
 {    display: flex;
     flex-direction: column;
     height: 180px;
     width:30px
-    
 }
 .container1
 {
@@ -56,15 +51,7 @@ body{
     height:30px;
     width: 180px;
 }
-.home
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90px;
-    width: 90px;
-    background-color: beige;
-}
+
 .cellss
 {
     width: 180px;
@@ -82,10 +69,8 @@ body{
     width: 180px;
     background-color: yellow;
 }
- 
 .insidered
 {    margin: 15px 15px ;
-
     background-color: white;
     height:150px;
     width: 150px;
@@ -97,7 +82,6 @@ body{
   height:75px;
   width:150px;
   background-color: white;
-
 }
 .gg
 {  display:flex;
@@ -132,20 +116,15 @@ body{
 img{
     cursor:pointer;
     height: 70%;
-     width: 70%;
-     object-fit: cover;
+    width: 70%;
+    object-fit: cover;
     border-radius: 50%;
-    
 }
 img.is-active {
   transform: scale(1.1);
   filter: brightness(1.2);
   border: 3px solid green;
 }
-
-
-
-
 .scell
 { background-image: url('star.png');
     background-size: contain;     
@@ -158,23 +137,53 @@ img.is-active {
 
 
 .home {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 90px;
     width: 90px;
     background-color: transparent;
+    overflow: visible;
+}
+
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 0;
+    height: 0;
+    border-top:  45px solid green;
+    border-right: 45px solid yellow;
+    border-bottom: 45px solid skyblue;
+    border-left:  45px solid red;
+    z-index: 0;
+}
+
+
+.homet {
+    position: relative;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
     overflow: hidden;
 }
 
-.homet {
-    width: 0;
-    height: 0;
-    border-top: 46px solid green;
-    border-right: 46px solid yellow;
-    border-bottom: 45px solid skyblue;
-    border-left: 45px solid red;
+
+.homet img {
+    height: 20px !important;
+    width: 20px !important;
+    cursor: default;
 }
+
 .rcell
 { background-image: url('r.png');
     background-size: contain;     
@@ -211,13 +220,11 @@ img.is-active {
     height: 30px;
     border: 1px solid black;
 }
-
 .cell, .scell, .rcell, .ycell, .gcell, .bcell {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .dice
 {   color: red;
     height: 100px;
@@ -226,13 +233,47 @@ img.is-active {
     margin-left: 100px;
     margin-bottom: 200px;
 }
-
 @keyframes flash {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.2; }
 }
-
 .blink {
   animation: flash 0.4s infinite; 
   box-shadow: 0 0 15px rgba(255, 255, 0, 0.8);
+}
+
+
+.dice-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+}
+
+#diceimg {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border: 3px solid #333;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#diceimg:hover {
+    box-shadow: 0 0 16px rgba(255, 220, 0, 0.9);
+    transform: scale(1.08);
+}
+
+@keyframes spin {
+    0%   { transform: rotate(0deg)   scale(1.1); }
+    25%  { transform: rotate(90deg)  scale(0.9); }
+    50%  { transform: rotate(180deg) scale(1.1); }
+    75%  { transform: rotate(270deg) scale(0.9); }
+    100% { transform: rotate(360deg) scale(1.1); }
+}
+
+.dice-spin {
+    animation: spin 0.12s linear;
 }
