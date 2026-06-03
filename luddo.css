@@ -97,9 +97,6 @@ body{
     align-items: center;
     height:45px;
     width:45px;
-    border-radius: 50%;
-    background-color: rgb(250, 248, 248);
-    border: 2px solid black;
     text-align: center;
 }
 .box2
@@ -107,9 +104,6 @@ body{
     height:45px;
     width:45px;
     display: flex;
-    border-radius: 50%;
-    background-color: rgb(247, 243, 243);
-    border: 2px solid black;
     justify-content: center;
     align-items: center;
 }
@@ -118,7 +112,6 @@ img{
     height: 70%;
     width: 70%;
     object-fit: cover;
-    border-radius: 50%;
 }
 img.is-active {
   transform: scale(1.1);
@@ -167,7 +160,6 @@ img.is-active {
     z-index: 1;
     width: 50px;
     height: 50px;
-    background-color: white;
     border-radius: 50%;
     display: flex;
     flex-wrap: wrap;
@@ -266,14 +258,6 @@ img.is-active {
     transform: scale(1.08);
 }
 
-@keyframes spin {
-    0%   { transform: rotate(0deg)   scale(1.1); }
-    25%  { transform: rotate(90deg)  scale(0.9); }
-    50%  { transform: rotate(180deg) scale(1.1); }
-    75%  { transform: rotate(270deg) scale(0.9); }
-    100% { transform: rotate(360deg) scale(1.1); }
-}
 
-.dice-spin {
-    animation: spin 0.12s linear;
-}
+
+
